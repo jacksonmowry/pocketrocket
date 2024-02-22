@@ -1,0 +1,25 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    @js '/htmx.min.js'
+    <meta charset="utf-8" />
+    <title>pocketrocket</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="output.css" type="text/css" media="screen" />
+  </head>
+  <body class="grainy">
+    <div class="grainy mb-20 flex w-full flex-col items-center h-max gap-4">
+      @include 'navbar.html'
+      <div class="flex justify-between gap-10 w-5/6 h-80">
+        @include 'welcome.html'
+        <!-- spacer lol  -->
+        @include 'glance.html'
+      </div>
+      <div class="w-5/6 h-max">
+        <!-- hi -->
+        @include 'admin_table.html'
+        <!-- hi -->
+      </div>
+    </div>
+  </body>
+</html>

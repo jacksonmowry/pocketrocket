@@ -1,0 +1,41 @@
+<div
+  class="flex w-full rounded-xl shadow bg-white items-center justify-center gap-10 flex-col px-4"
+>
+  <div class="border-b border-black flex w-full justify-between">
+    <div class="border-r border-black w-1/2 flex justify-between px-4">
+      <div class="flex flex-col items-center justify-between">
+        <span class="text-6xl font-bold">@databases</span>
+        <span>Databases</span>
+      </div>
+      <div class="flex flex-col items-center justify-between">
+        <span class="text-6xl font-bold">@tables</span>
+        <span>Tables</span>
+      </div>
+      <div class="flex flex-col items-center justify-between">
+        <span class="text-6xl font-bold">${db_size/1000:.1f}kb</span>
+        <span>DB Size</span>
+      </div>
+    </div>
+    <div class="w-1/2 flex justify-evenly px-4">
+      <div class="flex flex-col items-center justify-between">
+        <span class="text-6xl font-bold">@lambdas</span>
+        <span>Lambdas</span>
+      </div>
+      <div class="flex flex-col items-center justify-between">
+        <span class="text-6xl font-bold">${invocations:.1f}k</span>
+        <span>Invocations</span>
+      </div>
+    </div>
+  </div>
+  <div class="w-full">
+    <span class="self-start">Disk Usage: </span>
+    <div class="w-full bg-black rounded-full">
+      <div
+        class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+        style="width: ${disk_usage:.2f}%"
+      >
+        ${disk_usage:.2f}%
+      </div>
+    </div>
+  </div>
+</div>
